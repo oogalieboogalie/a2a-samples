@@ -1,0 +1,42 @@
+{
+  "name": "a2a-javascript-agent-blueprint",
+  "version": "1.0.0",
+  "description": "A2A JavaScript/TypeScript Agent Blueprint - Template for Node.js agents",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "start:dev": "tsx src/index.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": ["a2a", "agent", "genkit", "typescript"],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@a2a-protocol/core": "^0.1.0",
+    "@genkit-ai/ai": "^0.5.0",
+    "@genkit-ai/core": "^0.5.0",
+    "@genkit-ai/googleai": "^0.5.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

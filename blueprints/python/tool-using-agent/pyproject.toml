@@ -1,0 +1,50 @@
+[project]
+name = "tool-using-agent-blueprint"
+version = "1.0.0"
+description = "A2A Tool-Using Agent Blueprint - Template for agents with tools/functions"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Core A2A SDK
+    "a2a[server]>=0.2.3",
+
+    # Optional: Add tool-related dependencies
+    # "requests>=2.31.0",        # For API calls
+    # "openai>=1.0.0",           # For LLM-based tool selection
+    # "anthropic>=0.25.0",       # For Claude function calling
+    # "google-generativeai",     # For Gemini function calling
+    # "beautifulsoup4>=4.12.0",  # For web scraping
+    # "pandas>=2.0.0",           # For data manipulation
+    # "numpy>=1.24.0",           # For numerical computations
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+llm = [
+    "openai>=1.0.0",
+    "anthropic>=0.25.0",
+]
+
+api = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
